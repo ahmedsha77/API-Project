@@ -1,0 +1,68 @@
+body {
+    background-color: #ff0a0a;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+li{
+    list-style-type: none;
+}
+  
+  .header{
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Stylish', sans-serif;
+      color: whitesmoke;
+  }
+
+  .cars{
+      font-family: 'Stylish', sans-serif;
+      color: whitesmoke;
+  }
+
+  .films{
+    font-family: 'Stylish', sans-serif;
+    color: whitesmoke;
+}
+
+.persons{
+    font-family: 'Stylish', sans-serif;
+    color: whitesmoke;
+}
+
+.image{
+    z-index: 4;
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+      '2 2 2 3 3 3'
+      '4 4 5 5 5 5';
+  }
+  .item1 { grid-area: 1; }
+  .item2 { grid-area: 2; }
+  .item3 { grid-area: 3; }
+  .item4 { grid-area: 4; }
+  .item5 { grid-area: 5; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
