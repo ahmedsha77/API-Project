@@ -1,65 +1,262 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="ghibli.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+</head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.4.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.4.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.4.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.4.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.4.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<body>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<!--NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+    <a class="navbar-brand" href="#">Dropdown list of elements in the Ghibli API</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style = "color: whitesmoke">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Locations
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><div id="location">
+                <ul>
+    
+                </ul>
+            </div></a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              People
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><div id="personal">
+                  <ul>
+      
+                  </ul>
+              </div></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Films
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"><div id="movie">
+                    <ul>
+        
+                    </ul>
+                </div></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Species
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"><div id="species">
+                      <ul>
+              
+                      </ul>
+                  </div></a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Vehicles
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><div id="navCar">
+                        <ul>
+                
+                        </ul>
+                    </div></a>
+                  </div>
+                </li>
+
+      </ul>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+<!--HEADER-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-2">株式会社スタジオジブリ</h1>
+      <h1 class="display-3">Studio Ghibli</h1>
+      <h3>Studio Ghibli is a Japanese Animation film studio based in Tokyo, Japan.
+         The studio is best known for its anime feature films, and has also produced several short films,
+          television commercials, and one television film and was founded on 15 June 1985.</h3>
+      <p class="lead">Shiraz Ahmed</p>
+    </div>
+  </div>
+
+  <!--LIST OF ELEMENTS-->
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="cars">
+                <h2>These are the cars/vehicles in the Studio Ghibli Animations:</h2>
+                <div id="car">
+                    <ul>
+            
+                    </ul>
+                </div>
+              </div>
+           </div>
+           <div class="col">
+              <div class="films">
+                  <h2>These are the films made in Studio Ghibli:</h2>
+                  <div id="film">
+                      <ul>
+          
+                      </ul>
+                  </div>
+                 </div>
+        </div>
+        <div class="col">
+            <div class="persons">
+                <h2>These are the people/characters in the Studio Ghibli animations and their ages:</h2>
+                <div id="person">
+                    <ul>
+        
+                    </ul>
+                </div>
+        </div>
+      </div>
+       </div>
+<div class="row">
+  <div class="col align-self-center">
+      <div class="image">
+          <img src="assets/ghibliLogo.svg" width="800" height="400">
+      </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="col align align-self-center">
+<form>
+    <h2>How you can contact our Animation Studio:</h2>
+    <div class="form-group row">
+
+      <label for="inputEmail3" class="col-sm-2 col-form-label" style = "color: whitesmoke">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPhoneNumber" class="col-sm-2 col-form-label" style = "color: whitesmoke">Phone Number</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPhoneNumber" class="col-sm-2 col-form-label" style = "color: whitesmoke">Message</label>
+        <textarea rows="4" cols="50" name="comment" form="usrform">
+            Enter text here...
+          </textarea>
+        <div class="col-sm-10">
+          
+        </div>
+      </div>
+
+
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0" style = "color: whitesmoke">Are you currently a member of Studio Ghibli's Gold Membership?</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1" style = "color: whitesmoke">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2" style = "color: whitesmoke">
+              No
+            </label>
+          </div>
+
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <div class="col-sm-2" style = "color: whitesmoke">Do you want us to send exclusive Studio Ghibli promotions and offers through email?</div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1" style = "color: whitesmoke">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" onclick="clickAlert()" value="Click-2-Alert" style = "background-color: black" style = "color: red">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+
+<script>
+    function clickAlert() {
+      alert("Thanks for submitting a form with Ghibli Studio!");
+  }
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="ghibli.js"></script>
+</body>
+
+
+<body class="Site">
+    <header></header>
+    <main class="Site-content"></main>
+    <footer>
+        <div class="row">
+          <div class="col">
+          <div id="footers">
+              <table class="table table-dark" style = "background-color: black;">
+      
+                  <tbody>
+      
+                    <tr>
+                      <th scope="row"></th>
+                      <td><a href="https://ghibliapi.herokuapp.com/#section/Studio-Ghibli-API">Our API Website</a></td>
+                      <td><a href="https://en.wikipedia.org/wiki/Studio_Ghibli">Wikipedia Page</a></td>
+                      <td><a href="https://www.facebook.com/TheGhibliFamily/">Facebook Page</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td><a href="https://ghibliapi.herokuapp.com/#section/Getting-Started">Contact Us</td>
+                      <td><a href="https://ghibliapi.herokuapp.com/#section/Getting-Started">More Links</td>
+                      <td><a href="https://twitter.com/TheGhibliFamily">Twitter Page</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          </div>
+          </div>
+      </footer>
   </body>
+
 </html>

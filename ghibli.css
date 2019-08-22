@@ -1,19 +1,49 @@
 body {
     background-color: #ff0a0a;
     background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-    display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main right right'
-      'menu footer footer footer footer footer';
-    grid-gap: 10px;
-    padding: 10px;
+
   }
 
 li{
     list-style-type: none;
 }
+
   
+.jumbotron{
+    height: 60vh;
+    font-size: 70px;
+    font-family: 'Stylish', sans-serif;
+    text-align: center;
+    background-color: #ff0a0a;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    color: whitesmoke;
+}
+
+h2{
+    color: whitesmoke;
+    font-family: 'Stylish', sans-serif;
+}
+
+.navbar-brand{
+    
+    font-family: 'Stylish', sans-serif;
+  
+    color: whitesmoke !important;
+}
+
+.navbar{
+    background-color: #ff0000 !important;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+    color: whitesmoke !important;
+    font-family: 'Stylish', sans-serif;
+
+}
+
+#navbarDropdown{
+    font-family: 'Stylish', sans-serif;
+    color: whitesmoke !important;
+}
+
   .header{
       text-align: center;
       font-size: 30px;
@@ -36,28 +66,19 @@ li{
     color: whitesmoke;
 }
 
-.image{
-    z-index: 4;
+.footer{
+    width: 500px;
 }
 
-.container {
-    display: grid;
-    justify-items: center;
-    grid-template-areas:
-      '2 2 2 3 3 3'
-      '4 4 5 5 5 5';
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
-  .item1 { grid-area: 1; }
-  .item2 { grid-area: 2; }
-  .item3 { grid-area: 3; }
-  .item4 { grid-area: 4; }
-  .item5 { grid-area: 5; }
-
-
-
-
-
-
+  
+  .Site-content {
+    flex: 1;
+  }
 
 
 
